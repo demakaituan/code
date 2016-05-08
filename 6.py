@@ -43,7 +43,7 @@ def plot(n): #参数n为第n组
     plt.plot(sheet.col_values(i), sheet.col_values(j),'bo')   #作散点图
     x = np.array(sheet.col_values(i))          #numpy.array（）可以进行类型转换，将列表转换为数组类型
     y = np.array(sheet.col_values(j))
-    a,b = np.polyfit(x, y, 1)    #调用此函数进行线性拟合计算
+    a,b = np.polyfit(x, y, 1)   #调用此函数进行线性拟合计算
     predict_y = a*np.array(x) + b
     plt.plot(x, predict_y)
 
